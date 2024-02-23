@@ -6,7 +6,7 @@ const Product = ({key,id,data}) => {
     const navigate = useNavigate();
     return <div className="product-card" onClick={()=>navigate("/product/"+id)}>
         <div className="thumbnail">
-            <img src={process.env.REACT_APP_DEV_URL + data.image.data[0].attributes.url} alt="" />
+            <img src={data.image.data.attributes.url} alt="" />
         </div>
         <div className="product-details">
             <span className="name">{data.title}</span>
